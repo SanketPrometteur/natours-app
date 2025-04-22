@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'", 'https:', 'blob:'],
+      defaultSrc: ["'self'", 'http:', 'blob:'],
       scriptSrc: [
         "'self'",
         'https://cdn.jsdelivr.net',
@@ -59,7 +59,7 @@ app.use(
       ],
       styleSrc: [
         "'self'",
-        'https:',
+        'http:',
         "'unsafe-inline'"
       ],
       connectSrc: [
