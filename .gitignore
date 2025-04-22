@@ -9,3 +9,6 @@ package-lock.json
 
 # Ignore cache folder (e.g., used by build tools like Parcel)
 .cache/
+
+# Ignore .pem file
+natours.pem
