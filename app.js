@@ -44,37 +44,37 @@ app.set('views',path.join(__dirname,'views'));
 app.use(express.static(path.join(__dirname,'public'))); 
 // Set Security HTTP Headers
 
-app.use(helmet());
-// app.use(
-//   helmet.contentSecurityPolicy({
-//     directives: {
-//       defaultSrc: ["'self'", 'https:', 'blob:'],
-//       scriptSrc: [
-//         "'self'",
-//         'https://cdn.jsdelivr.net',
-//         'https://api.mapbox.com',
-//         'https://js.stripe.com',
-//         "'unsafe-inline'",
-//         'blob:'
-//       ],
-//       styleSrc: [
-//         "'self'",
-//         'https:',
-//         "'unsafe-inline'"
-//       ],
-//       connectSrc: [
-//         "'self'",
-//         'https://*.mapbox.com',
-//         'https://events.mapbox.com'
-//       ],
-//       imgSrc: ["'self'", 'data:', 'https://api.mapbox.com'],
-//       fontSrc: ["'self'", 'https:', 'data:'],
-//       workerSrc: ["'self'", 'blob:'],
-//       objectSrc: ["'none'"],
-//       baseUri: ["'self'"]
-//     }
-//   })
-// );
+// app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'", 'https:', 'blob:'],
+      scriptSrc: [
+        "'self'",
+        'https://cdn.jsdelivr.net',
+        'https://api.mapbox.com',
+        'https://js.stripe.com',
+        "'unsafe-inline'",
+        'blob:'
+      ],
+      styleSrc: [
+        "'self'",
+        'https:',
+        "'unsafe-inline'"
+      ],
+      connectSrc: [
+        "'self'",
+        'https://*.mapbox.com',
+        'https://events.mapbox.com'
+      ],
+      imgSrc: ["'self'", 'data:', 'https://api.mapbox.com'],
+      fontSrc: ["'self'", 'https:', 'data:'],
+      workerSrc: ["'self'", 'blob:'],
+      objectSrc: ["'none'"],
+      baseUri: ["'self'"]
+    }
+  })
+);
 
 
 
