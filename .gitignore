@@ -1,0 +1,11 @@
+# Ignore node modules
+node_modules/
+
+# Ignore environment config
+config.env
+
+# Ignore package lock
+package-lock.json
+
+# Ignore cache folder (e.g., used by build tools like Parcel)
+.cache/
